@@ -41,22 +41,6 @@ While 1
 	Wend
 WEnd
 
-
-
-Func reset();this is Unused and will be removed in next github update
-	$set = 0
-EndFunc   ;==>reset
-
-Func setup();this is Unused and will be removed in next github update
-	$sleep += 100
-	ConsoleWrite($sleep & @CRLF)
-EndFunc   ;==>setup
-
-Func setdwn() ;this is Unused and will be removed in next github update
-	$sleep -= 100
-	ConsoleWrite($sleep & @CRLF)
-EndFunc
-
 Func check() ;on and off function;
 	If $on = 1 Then
 		$on = 0
