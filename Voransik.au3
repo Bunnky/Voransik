@@ -9,11 +9,20 @@ While 1
 	While $on
 	If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
 		If $pickx = 0 Then ;Are the pots set as the location yet?;
-				ConsoleWrite("set the pots dumbass" & @CRLF)
-				$on = 0 ;return function to off as u cant click air;
-				Sleep(500)
+			ConsoleWrite("set the pots dumbass" & @CRLF)
+			$on = 0 ;return function to off as u cant click air;
+			Sleep(500)
 		Else
-
+		PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
+			If Not @error Then ;no heal needed as it sees green;
+				$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
+				If Not @error Then ;If it exists then
+					ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1]) ;Clicks the first instance of that colour
+					;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
+					Else
+						;ConsoleWrite ("no go gringo" &@crlf)
+						Sleep(50)
+					EndIf
 
 		EndIf
 	EndIf
