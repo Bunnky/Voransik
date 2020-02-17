@@ -83,10 +83,12 @@ Func chat()
 	sleep (10)
 	send ("t")
 	sleep (50)
-	Send ($chat & "{enter}")
+	Send ($chat)
 	sleep (50)
+	Send ("{enter}")
+	sleep(50)
 	$chat = $chat +5
-
+	sleep (10)
 EndFunc
 
 Func gold()
