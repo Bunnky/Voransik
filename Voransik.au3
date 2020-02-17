@@ -6,14 +6,14 @@
 HotKeySet("{ins}", "mouse")
 HotKeySet("{end}", "close")
 HotKeySet("{del}", "check")
-HotKeySet("{home}", "chat")
+HotKeySet("{numpad0}", "chat")
 HotKeySet("{home}", "gold")
 HotKeySet("{pause}", "kill")
 
 Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
-Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $set = 0, $sleep = 2500
+Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $chat = 1
 
 While 1
 	While $on
@@ -69,20 +69,6 @@ func GoldWhore()
 EndFunc
 
 
-Func reset()
-	$set = 0
-EndFunc   ;==>reset
-
-Func setup()
-	$sleep += 100
-	ConsoleWrite($sleep & @CRLF)
-EndFunc   ;==>setup
-
-Func setdwn()
-	$sleep -= 100
-	ConsoleWrite($sleep & @CRLF)
-EndFunc   ;==>setdwn
-
 Func check()
 	If $on = 1 Then
 		$on = 0
@@ -92,10 +78,10 @@ Func check()
 EndFunc   ;==>check
 
 
-Func chat ()
-	;end ("t" &"{enter}")
-	;Send ($chat & "{enter}")
-	+1 $chat
+Func chat()
+	send ("t" &"{enter}")
+	Send ($chat & "{enter}")
+	$chat = $chat *2
 	ConsoleWrite ($chat)
 EndFunc
 
