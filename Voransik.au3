@@ -10,6 +10,36 @@ WEnd
 
 
 
+Func reset()
+	$set = 0
+EndFunc   ;==>reset
+
+Func setup()
+	$sleep += 100
+	ConsoleWrite($sleep & @CRLF)
+EndFunc   ;==>setup
+
+Func setdwn()
+	$sleep -= 100
+	ConsoleWrite($sleep & @CRLF)
+EndFunc   ;==>setdwn
+
+Func check()
+	If $on = 1 Then
+		$on = 0
+	Else
+		$on = 1
+	EndIf
+EndFunc   ;==>check
+
+Func gold()
+	If $Gold = 1 Then
+		$Gold = 0
+	Else
+		$Gold = 1
+	EndIf
+EndFunc   ;==>gold
+
 Func close()
 	ConsoleWrite(@CRLF & "Closing Via Close Command" & @CRLF)
 	Exit
