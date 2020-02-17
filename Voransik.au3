@@ -6,6 +6,9 @@
 HotKeySet("{ins}", "mouse")
 HotKeySet("{end}", "close")
 HotKeySet("{del}", "check")
+HotKeySet("{home}", "reset")
+HotKeySet("{pgup}", "setup")
+HotKeySet("{pgdn}", "setdwn")
 HotKeySet("{home}", "gold")
 HotKeySet("{pause}", "kill")
 
@@ -24,23 +27,49 @@ While 1
 			Else
 				PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
 				If Not @error Then ;no heal needed as it sees green;
-					$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
-					If Not @error Then ;If it exists then
-						ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1]) ;Clicks the first instance of that colour
-						;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
-					Else
-						;ConsoleWrite ("no go gringo" &@crlf)
-						Sleep(50)
-					EndIf
+					GoldWhore()
 				Else
 					ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
 					ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
-					sleep (2000)
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
+					Sleep(200)
+					GoldWhore()
 				EndIf
 			EndIf
+			GoldWhore()
+
 		EndIf
 	WEnd
 WEnd
+
+func GoldWhore()
+	$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
+			If Not @error Then         ;If it exists then
+				ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1])         ;Clicks the first instance of that colour
+				;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
+			Else
+				;ConsoleWrite ("no go gringo" &@crlf)
+				Sleep(50)
+			EndIf
+EndFunc
+
 
 Func reset()
 	$set = 0
