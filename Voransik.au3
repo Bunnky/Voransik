@@ -8,9 +8,14 @@ Opt("PixelCoordMode", 2)
 While 1
 	While $on
 	If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
+		If $pickx = 0 Then ;Are the pots set as the location yet?;
+				ConsoleWrite("set the pots dumbass" & @CRLF)
+				$on = 0 ;return function to off as u cant click air;
+				Sleep(500)
+		Else
 
 
-
+		EndIf
 	EndIf
 	wend
 WEnd
