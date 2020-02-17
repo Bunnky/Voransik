@@ -6,6 +6,13 @@ Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
 While 1
+	While $on
+
+
+
+
+
+	wend
 WEnd
 
 
