@@ -13,8 +13,8 @@ HotKeySet("{pause}", "kill")
 Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
-Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $chat = 1
-
+Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0
+$chat = Random (0,99999999)
 While 1
 	While $on
 		If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
@@ -80,15 +80,13 @@ EndFunc   ;==>check
 
 
 Func chat()
-	sleep (10)
+
 	send ("t")
-	sleep (50)
+
 	Send ($chat)
-	sleep (50)
+
 	Send ("{enter}")
-	sleep(50)
-	$chat = $chat +5
-	sleep (10)
+
 EndFunc
 
 Func gold()
