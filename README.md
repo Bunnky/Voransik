@@ -1,14 +1,11 @@
 # Voransik
  The Shit I made to play Vorila/Dransik
 
-Button			Function
----------------------------
-
-INSERT       mouse  - Sets location of pots<br>
-END          close  - kill the program <br>
-DEL          check  - turn the program on or off<br>
-HOME         gold   - turn the gold vulture on or off<br>
-PAUSE 	     kill   - this will kill the Vorila Dransik Client<br>
+INSERT -=-   mouse  - Sets location of pots<br>
+END    -=-   close  - kill the program <br>
+DEL    -=-   check  - turn the program on or off<br>
+HOME   -=-   gold   - turn the gold vulture on or off<br>
+PAUSE  -=-   kill   - this will kill the Vorila Dransik Client<br>
 
 
 This is a Script made is Autoit (www.Autoit.com)
