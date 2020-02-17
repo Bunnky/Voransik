@@ -79,9 +79,9 @@ EndFunc   ;==>check
 
 
 Func chat()
-	send ("t" &"{enter}")
+	send ("t")
 	Send ($chat & "{enter}")
-	$chat = $chat *2
+	$chat = $chat +2
 	ConsoleWrite ($chat)
 EndFunc
 
