@@ -2,6 +2,15 @@
 ;Kyle GusToughSon Bishop
 ;GusToughSon@Icloud.com
 
+HotKeySet("{ins}", "mouse")
+HotKeySet("{end}", "close")
+HotKeySet("{del}", "check")
+HotKeySet("{home}", "reset")
+HotKeySet("{pgup}", "setup")
+HotKeySet("{pgdn}", "setdwn")
+HotKeySet("{home}", "gold")
+HotKeySet("{pause}", "kill")
+
 Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
