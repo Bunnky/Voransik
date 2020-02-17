@@ -5,6 +5,8 @@
 Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
+Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $set = 0, $sleep = 2500
+
 While 1
 	While $on
 	If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
