@@ -4,8 +4,8 @@
 Button			Function
 ---------------------------
 
-INSERT       mouse  - Sets location of pots
-END			 close  - kill the program 
+INSERT       mouse  - Sets location of pots<br>
+END          close  - kill the program 
 DEL          check  - turn the program on or off
 HOME         gold   - turn the gold vulture on or off
 PAUSE 		 kill	- this will kill the Vorila Dransik Client
