@@ -54,6 +54,7 @@ While 1
 			GoldWhore()
 
 		EndIf
+
 	WEnd
 WEnd
 
@@ -79,10 +80,13 @@ EndFunc   ;==>check
 
 
 Func chat()
+	sleep (10)
 	send ("t")
+	sleep (5)
 	Send ($chat & "{enter}")
-	$chat = $chat +2
-	ConsoleWrite ($chat)
+	sleep (5)
+	$chat = $chat +5
+
 EndFunc
 
 Func gold()
