@@ -6,9 +6,6 @@
 HotKeySet("{ins}", "mouse")
 HotKeySet("{end}", "close")
 HotKeySet("{del}", "check")
-HotKeySet("{home}", "reset")
-HotKeySet("{pgup}", "setup")
-HotKeySet("{pgdn}", "setdwn")
 HotKeySet("{home}", "gold")
 HotKeySet("{pause}", "kill")
 
