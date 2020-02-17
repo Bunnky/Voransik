@@ -6,7 +6,6 @@
 HotKeySet("{ins}", "mouse")
 HotKeySet("{end}", "close")
 HotKeySet("{del}", "check")
-HotKeySet("{numpad0}", "chat")
 HotKeySet("{home}", "gold")
 HotKeySet("{pause}", "kill")
 
@@ -79,15 +78,6 @@ Func check()
 EndFunc   ;==>check
 
 
-Func chat()
-
-	send ("t")
-
-	Send ($chat)
-
-	Send ("{enter}")
-
-EndFunc
 
 Func gold()
 	If $Gold = 1 Then
