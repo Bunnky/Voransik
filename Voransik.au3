@@ -19,14 +19,14 @@ While 1
 				If Not @error Then ;If it exists then
 					ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1]) ;Clicks the first instance of that colour
 					;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
-					Else
+				Else
 						ConsoleWrite ("no go gringo" &@crlf)
 						Sleep(50)
-					EndIf
-
+				EndIf
+			EndIf
 		EndIf
 	EndIf
-	wend
+	Wend
 WEnd
 
 
