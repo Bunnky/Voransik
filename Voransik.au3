@@ -6,9 +6,7 @@
 HotKeySet("{ins}", "mouse")
 HotKeySet("{end}", "close")
 HotKeySet("{del}", "check")
-HotKeySet("{home}", "reset")
-HotKeySet("{pgup}", "setup")
-HotKeySet("{pgdn}", "setdwn")
+HotKeySet("{home}", "chat")
 HotKeySet("{home}", "gold")
 HotKeySet("{pause}", "kill")
 
@@ -92,6 +90,14 @@ Func check()
 		$on = 1
 	EndIf
 EndFunc   ;==>check
+
+
+Func chat ()
+	;end ("t" &"{enter}")
+	;Send ($chat & "{enter}")
+	+1 $chat
+	ConsoleWrite ($chat)
+EndFunc
 
 Func gold()
 	If $Gold = 1 Then
