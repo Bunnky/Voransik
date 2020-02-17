@@ -1,15 +1,14 @@
 # Voransik
  The Shit I made to play Vorila/Dransik
 
-Hotkeys
-HotKeySet("{ins}", "mouse")
-HotKeySet("{end}", "close")
-HotKeySet("{del}", "check")
-HotKeySet("{home}", "reset");this is Unused and will be removed in next github update
-HotKeySet("{pgup}", "setup");this is Unused and will be removed in next github update
-HotKeySet("{pgdn}", "setdwn");this is Unused and will be removed in next github update
-HotKeySet("{home}", "gold")
-HotKeySet("{pause}", "kill")
+Button			Function
+---------------------------
+
+insert        mouse - Sets location of pots
+end			 close  kill the program 
+del          check turn the program on or off
+home         gold turn the gold vulture on or off
+pause 		kill	this will kill the Vorila Dransik Client
 
 
 
