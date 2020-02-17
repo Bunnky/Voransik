@@ -59,8 +59,10 @@ EndFunc   ;==>setdwn
 Func check()
 	If $on = 1 Then
 		$on = 0
+		ConsoleWrite ("off" & @crlf)
 	Else
 		$on = 1
+		ConsoleWrite ("on" & @CRLF)
 	EndIf
 EndFunc   ;==>check
 
