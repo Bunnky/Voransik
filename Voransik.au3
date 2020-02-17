@@ -1,5 +1,6 @@
 ;Pothack Voransik
 ;Kyle GusToughSon Bishop
+;Discord : GusToughSon#7073
 ;GusToughSon@Icloud.com
 
 HotKeySet("{ins}", "mouse")
@@ -42,21 +43,21 @@ WEnd
 
 
 
-Func reset()
+Func reset();this is Unused and will be removed in next github update
 	$set = 0
 EndFunc   ;==>reset
 
-Func setup()
+Func setup();this is Unused and will be removed in next github update
 	$sleep += 100
 	ConsoleWrite($sleep & @CRLF)
 EndFunc   ;==>setup
 
-Func setdwn()
+Func setdwn() ;this is Unused and will be removed in next github update
 	$sleep -= 100
 	ConsoleWrite($sleep & @CRLF)
-EndFunc   ;==>setdwn
+EndFunc
 
-Func check()
+Func check() ;on and off function;
 	If $on = 1 Then
 		$on = 0
 		ConsoleWrite ("off" & @crlf)
@@ -64,7 +65,7 @@ Func check()
 		$on = 1
 		ConsoleWrite ("on" & @CRLF)
 	EndIf
-EndFunc   ;==>check
+EndFunc
 
 Func gold()
 	If $Gold = 1 Then
