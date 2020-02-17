@@ -4,15 +4,11 @@
 Button			Function
 ---------------------------
 
-insert       mouse  - Sets location of pots
-end			 close  - kill the program 
-del          check  - turn the program on or off
-home         gold   - turn the gold vulture on or off
-pause 		 kill	- this will kill the Vorila Dransik Client
-
-
-
-
+INSERT       mouse  - Sets location of pots
+END			 close  - kill the program 
+DEL          check  - turn the program on or off
+HOME         gold   - turn the gold vulture on or off
+PAUSE 		 kill	- this will kill the Vorila Dransik Client
 
 
 This is a Script made is Autoit (www.Autoit.com)
@@ -26,3 +22,5 @@ Cures in works
 
 It force closes The client so no more waiting on close, 
 
+Get Autoit At 
+	https://www.autoitscript.com/site/autoit/downloads/
