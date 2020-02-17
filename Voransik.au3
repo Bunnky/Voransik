@@ -20,7 +20,7 @@ While 1
 					ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1]) ;Clicks the first instance of that colour
 					;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
 					Else
-						;ConsoleWrite ("no go gringo" &@crlf)
+						ConsoleWrite ("no go gringo" &@crlf)
 						Sleep(50)
 					EndIf
 
