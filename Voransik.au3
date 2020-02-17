@@ -82,9 +82,9 @@ EndFunc   ;==>check
 Func chat()
 	sleep (10)
 	send ("t")
-	sleep (5)
+	sleep (50)
 	Send ($chat & "{enter}")
-	sleep (5)
+	sleep (50)
 	$chat = $chat +5
 
 EndFunc
