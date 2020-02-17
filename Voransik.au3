@@ -7,11 +7,11 @@ Opt("PixelCoordMode", 2)
 
 While 1
 	While $on
+	If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
 
 
 
-
-
+	EndIf
 	wend
 WEnd
 
