@@ -1,3 +1,7 @@
+#Region ;**** Directives created by AutoIt3Wrapper_GUI ****
+#AutoIt3Wrapper_Outfile=C:\Users\gooro\Desktop\Voransik.Exe
+#EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
+#include <Misc.au3>
 ;Pothack Vorila Dransik
 ;Kyle GusToughSon Bishop
 ;Discord : GusToughSon#7073
@@ -12,50 +16,81 @@ HotKeySet("{pause}", "kill")
 Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
-Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0
+Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1
 $chat = Random (0,99999999)
 While 1
 	While $on
+		if _IsPressed (04) Then
+			send ("{tab}")
+			Sleep (100)
+		EndIf
+
 		If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
 			If $pickx = 0 Then ;Are the pots set as the location yet?;
 				ConsoleWrite("set the pots dumbass" & @CRLF)
 				$on = 0 ;return function to off as u cant click air;
+				remap ()
 				Sleep(500)
+				remap ()
 			Else
 				PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
 				If Not @error Then ;no heal needed as it sees green;
+					remap ()
 					GoldWhore()
 				Else
 					ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
 					ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 					Sleep(200)
+					remap ()
 					GoldWhore()
 				EndIf
 			EndIf
+			remap ()
 			GoldWhore()
 
 		EndIf
 
 	WEnd
+	While $off
+		remap ()
+	WEnd
+
 WEnd
+
+
+func remap()
+	if _IsPressed (04) Then
+			send ("{tab}")
+			Sleep (100)
+	EndIf
+EndFunc
 
 func GoldWhore()
 	$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
@@ -72,10 +107,12 @@ EndFunc
 Func check()
 	If $on = 1 Then
 		$on = 0
+		$off = 1
 	Else
+		$off = 0
 		$on = 1
 	EndIf
-EndFunc   ;==>check
+EndFunc
 
 
 
@@ -85,7 +122,7 @@ Func gold()
 	Else
 		$Gold = 1
 	EndIf
-EndFunc   ;==>gold
+EndFunc ;still unused;
 
 Func close()
 	ConsoleWrite(@CRLF & "Closing Via Close Command" & @CRLF)
