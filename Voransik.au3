@@ -106,7 +106,7 @@ func GoldWhore()
 			ControlClick("Dransik Classic", "", "", "right", 1, $CaveGold[0], $CaveGold[1])         ;Clicks the first instance of that colour
 			;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
 		Else
-			;ConsoleWrite ("no go gringo" &@crlf)
+			;ConsoleWrite ("gringo gets nothing" &@crlf)
 			Sleep(50)
 		EndIf
 EndFunc
