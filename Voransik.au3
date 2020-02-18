@@ -94,13 +94,21 @@ EndFunc
 
 func GoldWhore()
 	$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
-			If Not @error Then         ;If it exists then
-				ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1])         ;Clicks the first instance of that colour
-				;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
-			Else
-				;ConsoleWrite ("no go gringo" &@crlf)
-				Sleep(50)
-			EndIf
+		If Not @error Then         ;If it exists then
+			ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1])         ;Clicks the first instance of that colour
+			;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
+		Else
+			;ConsoleWrite ("no go gringo" &@crlf)
+			Sleep(50)
+		EndIf
+	$CaveGold = PixelSearch (188, 188, 245, 245, 0x7C611A) ;attempt for cave gold
+		If Not @error Then         ;If it exists then
+			ControlClick("Dransik Classic", "", "", "right", 1, $CaveGold[0], $CaveGold[1])         ;Clicks the first instance of that colour
+			;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
+		Else
+			;ConsoleWrite ("no go gringo" &@crlf)
+			Sleep(50)
+		EndIf
 EndFunc
 
 
