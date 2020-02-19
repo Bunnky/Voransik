@@ -20,66 +20,66 @@ Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1
 $chat = Random (0,99999999)
 While 1
 	While $on
-		if _IsPressed (04) Then
-			send ("{tab}")
-			Sleep (100)
-		EndIf
+;~ 		if _IsPressed (04) Then
+;~ 			send ("{tab}")
+;~ 			Sleep (100)
+;~ 		EndIf
 
 		If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
 			If $pickx = 0 Then ;Are the pots set as the location yet?;
 				ConsoleWrite("set the pots dumbass" & @CRLF)
 				$on = 0 ;return function to off as u cant click air;
-				remap ()
+;~ 				remap ()
 				Sleep(500)
-				remap ()
+;~ 				remap ()
 			Else
 				PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
 				If Not @error Then ;no heal needed as it sees green;
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 				Else
 					ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
 					ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
 					Sleep(200)
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-					remap ()
+;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-					remap ()
-					GoldWhore()
-					Sleep(200)
-					remap ()
-					GoldWhore()
-					Sleep(200)
-					remap ()
-					GoldWhore()
+;~ 					remap ()
+;~ 					GoldWhore()
+;~ 					Sleep(200)
+;~ 					remap ()
+;~ 					GoldWhore()
+;~ 					Sleep(200)
+;~ 					remap ()
+;~ 					GoldWhore()
 				EndIf
 			EndIf
-			remap ()
+;~ 			remap ()
 			GoldWhore()
 
 		EndIf
 
 	WEnd
 	While $off
-		remap ()
+;~ 		remap ()
 	WEnd
 
 WEnd
