@@ -7,6 +7,7 @@
 ;Discord : GusToughSon#7073
 ;GusToughSon@Icloud.com
 
+HotKeySet("{numpad0}", "mouse1")
 HotKeySet("{ins}", "mouse") ;Press Insert over pots to set where the pothack clicks;
 HotKeySet("{end}", "close") ;press End To kill Voransik hack;
 HotKeySet("{del}", "check") ;press DEL to turn it on or off;
@@ -17,10 +18,10 @@ HotKeySet ("{`}","ClickBoner") ;Exctra Cleanup for left behind loot;
 Opt("MouseCoordMode", 2) ;This sets the way the mouse interacts with the client (set as 2) ;
 Opt("PixelCoordMode", 2) ;This sets the way the PixelSearch interacts with the client (set as 2) ;
 
-ConsoleWrite ("Started")
+ConsoleWrite ("Started" & @CRLF)
 
 ;This is Global Variables;
-Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1,$clicklapwait = 25
+Global $pickx = 0, $picky = 0,$pick1x = 0, $pick1y = 0, $Gold = 1, $on = 0, $off = 1,$clicklapwait = 25
 
 While 1
 	While $on
@@ -30,8 +31,8 @@ While 1
 				$on = 0 ;return function to off as u cant click air;
 				Sleep(500)
 			 Else
-				MouseMove (430,12)
-				PixelSearch(400, 300, 400, 300, 0x00C800) ;health bar green check;
+				;MouseMove ($pick1x,$pick1y)
+				PixelSearch($pick1x,$pick1y,$pick1x,$pick1y, 0x00C800) ;health bar green check;
 				If Not @error Then ;no heal needed as it sees green;
 					GoldWhore()
 				Else
@@ -98,9 +99,11 @@ Func check()
 	If $on = 1 Then
 		$on = 0
 		$off = 1
+		ConsoleWrite ("You Slapped a Chicken" & @crlf)
 	Else
 		$off = 0
 		$on = 1
+		ConsoleWrite ("The Cat Ate Some Leaves" & @crlf)
 	EndIf
 EndFunc
 
@@ -121,4 +124,12 @@ Func mouse()
 	ConsoleWrite("Pots now Set At Location:" & @CRLF)
 	ConsoleWrite("X = " & $pickx & @CRLF)
 	ConsoleWrite("Y = " & $picky & @CRLF)
+ EndFunc
+
+ Func mouse1()
+	$pick1x = MouseGetPos(0)
+	$pick1y = MouseGetPos(1)
+	ConsoleWrite("Hp Bar now Set At Location:" & @CRLF)
+	ConsoleWrite("HpX = " & $pick1x & @CRLF)
+	ConsoleWrite("HPY = " & $pick1y & @CRLF)
 EndFunc
