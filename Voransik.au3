@@ -14,11 +14,12 @@ HotKeySet("{home}", "gold") ;no function will be removed on cleanup;
 HotKeySet("{pause}", "kill") ;Force close the Vorila/Dransik Client IE:Old Style dransik logout;
 HotKeySet ("{`}","ClickBoner") ;Exctra Cleanup for left behind loot;
 
-Opt("MouseCoordMode", 2)
-Opt("PixelCoordMode", 2)
+Opt("MouseCoordMode", 2) ;This sets the way the mouse interacts with the client (set as 2) ;
+Opt("PixelCoordMode", 2) ;This sets the way the PixelSearch interacts with the client (set as 2) ;
 
 ConsoleWrite ("Started")
 
+;This is Global Variables;
 Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1,$clicklapwait = 25
 
 While 1
