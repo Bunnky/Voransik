@@ -12,13 +12,14 @@ HotKeySet("{end}", "close") ;press End To kill Voransik hack;
 HotKeySet("{del}", "check") ;press DEL to turn it on or off;
 HotKeySet("{home}", "gold") ;no function will be removed on cleanup;
 HotKeySet("{pause}", "kill") ;Force close the Vorila/Dransik Client IE:Old Style dransik logout;
+HotKeySet ("{`}","ClickBoner") ;Exctra Cleanup for left behind loot;
 
 Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
 ConsoleWrite ("Started")
 
-Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1
+Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1,$clicklapwait = 25
 
 While 1
 	While $on
@@ -54,6 +55,25 @@ While 1
 		EndIf
 	WEnd
 WEnd
+
+Func ClickBoner ()
+   ControlClick("Dransik Classic", "", "", "right", 1, 199, 231) ;topleft;
+	  sleep($clicklapwait)
+   ControlClick("Dransik Classic", "", "", "right", 1, 215, 231) ;top;
+	  sleep($clicklapwait)
+   ControlClick("Dransik Classic", "", "", "right", 1, 231, 231) ;topright;
+	  sleep($clicklapwait)
+   ControlClick("Dransik Classic", "", "", "right", 1, 199, 215) ;left;
+	  sleep($clicklapwait)
+   ControlClick("Dransik Classic", "", "", "right", 1, 231, 215) ;right;
+	  sleep($clicklapwait)
+   ControlClick("Dransik Classic", "", "", "right", 1, 199, 199) ;downleft;
+	  sleep($clicklapwait)
+   ControlClick("Dransik Classic", "", "", "right", 1, 215, 199) ;down;
+	  sleep($clicklapwait)
+   ControlClick("Dransik Classic", "", "", "right", 1, 231, 199) ;down right;
+	  sleep($clicklapwait)
+EndFunc
 
 func GoldWhore()
 	$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
