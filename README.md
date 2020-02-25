@@ -11,14 +11,13 @@ PAUSE  -=-   kill   - this will kill the Vorila Dransik Client<br>
 
 This is a Script made is Autoit (www.Autoit.com)
 
-It will pickup gold and some drops, 
+It will pickup gold and some drops, <br>
 
-Hotkey sets location of pots
+Hotkey sets location of pots<br>
 
-It will auto heal you to max heath (not using your mouse)
-Cures in works
+It will auto heal you to max heath (not using your mouse)<br>
 
-It force closes The client so no more waiting on close, 
+It force closes The client so no more waiting on close, <br>
 
 Get Autoit At 
 	https://www.autoitscript.com/site/autoit/downloads/
