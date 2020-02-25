@@ -31,7 +31,7 @@ While 1
 				Sleep(500)
 			 Else
 				MouseMove (430,12)
-				PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
+				PixelSearch(400, 300, 400, 300, 0x00C800) ;health bar green check;
 				If Not @error Then ;no heal needed as it sees green;
 					GoldWhore()
 				Else
