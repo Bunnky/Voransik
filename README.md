@@ -6,6 +6,7 @@ END    -=-   close  - kill the program <br>
 DEL    -=-   check  - turn the program on or off<br>
 HOME   -=-   gold   - turn the gold vulture on or off<br>
 PAUSE  -=-   kill   - this will kill the Vorila Dransik Client<br>
+`      -=-  cleanup  - this is a extra loot button<br>
 
 
 This is a Script made is Autoit (www.Autoit.com)
