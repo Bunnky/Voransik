@@ -7,24 +7,21 @@
 ;Discord : GusToughSon#7073
 ;GusToughSon@Icloud.com
 
-HotKeySet("{ins}", "mouse")
-HotKeySet("{end}", "close")
-HotKeySet("{del}", "check")
-HotKeySet("{home}", "gold")
-HotKeySet("{pause}", "kill")
+HotKeySet("{ins}", "mouse") ;Press Insert over pots to set where the pothack clicks;
+HotKeySet("{end}", "close") ;press End To kill Voransik hack;
+HotKeySet("{del}", "check") ;press DEL to turn it on or off;
+HotKeySet("{home}", "gold") ;no function will be removed on cleanup;
+HotKeySet("{pause}", "kill") ;Force close the Vorila/Dransik Client IE:Old Style dransik logout;
 
 Opt("MouseCoordMode", 2)
 Opt("PixelCoordMode", 2)
 
+ConsoleWrite ("Started")
+
 Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1
-$chat = Random (0,99999999)
+
 While 1
 	While $on
-;~ 		if _IsPressed (04) Then
-;~ 			send ("{tab}")
-;~ 			Sleep (100)
-;~ 		EndIf
-
 		If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
 			If $pickx = 0 Then ;Are the pots set as the location yet?;
 				ConsoleWrite("set the pots dumbass" & @CRLF)
