@@ -26,74 +26,39 @@ While 1
 			If $pickx = 0 Then ;Are the pots set as the location yet?;
 				ConsoleWrite("set the pots dumbass" & @CRLF)
 				$on = 0 ;return function to off as u cant click air;
-;~ 				remap ()
 				Sleep(500)
-;~ 				remap ()
 			Else
 				PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
 				If Not @error Then ;no heal needed as it sees green;
-;~ 					remap ()
 					GoldWhore()
 				Else
 					ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
 					ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
 					Sleep(200)
-;~ 					remap ()
+					Sleep(200)
 					GoldWhore()
 					Sleep(200)
-;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-;~ 					remap ()
 					GoldWhore()
 					Sleep(200)
-;~ 					remap ()
-					GoldWhore()
-					Sleep(200)
-;~ 					remap ()
-;~ 					GoldWhore()
-;~ 					Sleep(200)
-;~ 					remap ()
-;~ 					GoldWhore()
-;~ 					Sleep(200)
-;~ 					remap ()
-;~ 					GoldWhore()
 				EndIf
 			EndIf
-;~ 			remap ()
 			GoldWhore()
-
 		EndIf
-
 	WEnd
-	While $off
-;~ 		remap ()
-	WEnd
-
 WEnd
-
-
-func remap()
-	if _IsPressed (04) Then
-			send ("{tab}")
-			Sleep (100)
-	EndIf
-EndFunc
 
 func GoldWhore()
 	$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
 		If Not @error Then         ;If it exists then
 			ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1])         ;Clicks the first instance of that colour
-			;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
 		Else
 			;ConsoleWrite ("no go gringo" &@crlf)
 			Sleep(50)
@@ -101,13 +66,11 @@ func GoldWhore()
 	$CaveGold = PixelSearch (188, 188, 245, 245, 0x7C611A) ;attempt for cave gold
 		If Not @error Then         ;If it exists then
 			ControlClick("Dransik Classic", "", "", "right", 1, $CaveGold[0], $CaveGold[1])         ;Clicks the first instance of that colour
-			;MouseClick ("right",$Coord[0],$Coord[1],1);test function to visualize the ghost click
 		Else
 			;ConsoleWrite ("gringo gets nothing" &@crlf)
 			Sleep(50)
 		EndIf
 EndFunc
-
 
 Func check()
 	If $on = 1 Then
@@ -119,25 +82,15 @@ Func check()
 	EndIf
 EndFunc
 
-
-
-Func gold()
-	If $Gold = 1 Then
-		$Gold = 0
-	Else
-		$Gold = 1
-	EndIf
-EndFunc ;still unused;
-
 Func close()
 	ConsoleWrite(@CRLF & "Closing Via Close Command" & @CRLF)
 	Exit
-EndFunc   ;==>close
+EndFunc
 
 Func kill()
 	ProcessClose ("Vorlia Client.exe")
 	ConsoleWrite("tryed" & @CRLF)
-EndFunc   ;==>kill
+EndFunc
 
 Func mouse()
 	$pickx = MouseGetPos(0)
@@ -146,4 +99,4 @@ Func mouse()
 	ConsoleWrite("Pots now Set At Location:" & @CRLF)
 	ConsoleWrite("X = " & $pickx & @CRLF)
 	ConsoleWrite("Y = " & $picky & @CRLF)
-EndFunc   ;==>mouse
+EndFunc
