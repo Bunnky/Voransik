@@ -29,8 +29,11 @@ While 1
 				ConsoleWrite("set the pots dumbass" & @CRLF)
 				$on = 0 ;return function to off as u cant click air;
 				Sleep(500)
-			Else
+			 Else
+				MouseMove (430,12)
 				PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
+
+
 				If Not @error Then ;no heal needed as it sees green;
 					GoldWhore()
 				Else
