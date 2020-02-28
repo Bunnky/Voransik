@@ -5,6 +5,7 @@
 ;GusToughSon@Icloud.com
 
 HotKeySet ("{f3}", "mouse")    ;Press Insert over pots to set where the pothack clicks;
+HotKeySet ("{ins}", "mouse")   ;Press Insert over pots to set where the pothack clicks;
 HotKeySet ("{end}", "close")   ;press End To kill Voransik hack;
 HotKeySet ("{del}", "check")   ;press DEL to turn it on or off;
 HotKeySet ("{home}", "gold")   ;no function will be removed on cleanup;
@@ -14,7 +15,7 @@ HotKeySet ("{`}","ClickBoner") ;Exctra Cleanup for left behind loot;
 Opt("MouseCoordMode", 2) ;This sets the way the mouse interacts with the client (set as 2) ;
 Opt("PixelCoordMode", 2) ;This sets the way the PixelSearch interacts with the client (set as 2) ;
 
-ConsoleWrite ("Started")
+ConsoleWrite ("Started" & @CRLF)
 
 ;This is Global Variables;
 Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0,$clicklapwait = 25
@@ -29,6 +30,7 @@ While 1
 			 Else
 			   PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
 				  If Not @error Then ;no heal needed as it sees green;
+					 ;ConsoleWrite ("this shit" & @crlf)
 					 GoldWhore()
 				  Else
 					 ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
