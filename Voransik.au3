@@ -1,6 +1,3 @@
-#Region ;**** Directives created by AutoIt3Wrapper_GUI ****
-#AutoIt3Wrapper_Outfile=C:\Users\gooro\Desktop\Voransik.Exe
-#EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
 #include <Misc.au3>
 ;Pothack Vorila Dransik
 ;Kyle GusToughSon Bishop
@@ -20,36 +17,36 @@ Opt("PixelCoordMode", 2) ;This sets the way the PixelSearch interacts with the c
 ConsoleWrite ("Started")
 
 ;This is Global Variables;
-Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0, $off = 1,$clicklapwait = 25
+Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0,$clicklapwait = 25
 
 While 1
 	While $on
 		If WinActive("Dransik Classic") Then ;Make sure the game is in Focus
 			If $pickx = 0 Then ;Are the pots set as the location yet?;
-				ConsoleWrite("set the pots dumbass" & @CRLF)
-				$on = 0 ;return function to off as u cant click air;
-				Sleep(500)
+			   ConsoleWrite("set the pots dumbass" & @CRLF)
+			   $on = 0 ;return function to off as u cant click air;
+			   Sleep(500)
 			 Else
-				PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
-				If Not @error Then ;no heal needed as it sees green;
-					GoldWhore()
-				Else
-					ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
-					ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
-					Sleep(200)
-					Sleep(200)
-					GoldWhore()
-					Sleep(200)
-					GoldWhore()
-					Sleep(200)
-					GoldWhore()
-					Sleep(200)
-					GoldWhore()
-					Sleep(200)
-					GoldWhore()
-					Sleep(200)
-					GoldWhore()
-					Sleep(200)
+			   PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
+				  If Not @error Then ;no heal needed as it sees green;
+					 GoldWhore()
+				  Else
+					 ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
+					 ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
+					 Sleep(200)
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
 				EndIf
 			EndIf
 			GoldWhore()
@@ -77,47 +74,44 @@ Func ClickBoner ()
 EndFunc
 
 func GoldWhore()
-	$CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
-		If Not @error Then         ;If it exists then
-			ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1])         ;Clicks the first instance of that colour
-		Else
-			;ConsoleWrite ("no go gringo" &@crlf)
-			Sleep(50)
-		EndIf
-	$CaveGold = PixelSearch (188, 188, 245, 245, 0x7C611A) ;attempt for cave gold
-		If Not @error Then         ;If it exists then
-			ControlClick("Dransik Classic", "", "", "right", 1, $CaveGold[0], $CaveGold[1])         ;Clicks the first instance of that colour
-		Else
-			;ConsoleWrite ("gringo gets nothing" &@crlf)
-			Sleep(50)
-		EndIf
+   $CoOrd = PixelSearch(188, 188, 245, 245, 0xE4D008) ; Looks for goldwww.
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("no go gringo" &@crlf)
+		 Sleep(50)
+	  EndIf
+   $CaveGold = PixelSearch (188, 188, 245, 245, 0x7C611A) ;attempt for cave gold
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $CaveGold[0], $CaveGold[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo gets nothing" &@crlf)
+	  Sleep(50)
+	  EndIf
 EndFunc
 
 Func check()
-	If $on = 1 Then
-		$on = 0
-		$off = 1
-	Else
-		$off = 0
-		$on = 1
-	EndIf
+   If $on = 1 Then
+	  $on = 0
+   Else
+	  $on = 1
+   EndIf
 EndFunc
 
 Func close()
-	ConsoleWrite(@CRLF & "Closing Via Close Command" & @CRLF)
-	Exit
+   ConsoleWrite(@CRLF & "Closing Via Close Command" & @CRLF)
+   Exit
 EndFunc
 
 Func kill()
-	ProcessClose ("Vorlia Client.exe")
-	ConsoleWrite("tryed" & @CRLF)
+   ProcessClose ("Vorlia Client.exe")
+   ConsoleWrite("tryed" & @CRLF)
 EndFunc
 
 Func mouse()
-	$pickx = MouseGetPos(0)
-	$picky = MouseGetPos(1)
-	$set = 1
-	ConsoleWrite("Pots now Set At Location:" & @CRLF)
-	ConsoleWrite("X = " & $pickx & @CRLF)
-	ConsoleWrite("Y = " & $picky & @CRLF)
+   $pickx = MouseGetPos(0)
+   $picky = MouseGetPos(1)
+   ConsoleWrite("Pots now Set At Location:" & @CRLF)
+   ConsoleWrite("X = " & $pickx & @CRLF)
+   ConsoleWrite("Y = " & $picky & @CRLF)
 EndFunc
