@@ -18,7 +18,7 @@ Opt("PixelCoordMode", 2) ;This sets the way the PixelSearch interacts with the c
 
 ConsoleWrite ("Started" & @CRLF)
 
-;This is Global Variables;
+;This is Global Variables; Disease is ;0xDC8C00;  Poison is ;     ;
 Global $pickx = 0, $picky = 0, $pickx1 = 0, $picky1 = 0, $pickx2 = 0, $picky2 = 0, $Gold = 1, $on = 0,$clicklapwait = 25
 
 While 1
@@ -42,7 +42,7 @@ While 1
 		EndIf
 	WEnd
 WEnd
-;0xDC8C00;  10, 99     -     69, 105
+
 Func ClickBoner ()
    ControlClick("Dransik Classic", "", "", "right", 1, 199, 231) ;topleft;
 	  sleep($clicklapwait)
