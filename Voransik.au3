@@ -28,23 +28,13 @@ While 1
 			   $on = 0 ;return function to off as u cant click air;
 			   Sleep(500)
 			Else
-			   if PixelSearch (10, 99,69, 105,0xDC8C00) Then
-				  ConsoleWrite ("Nigga u got herpies" & @crlf)
+			   PixelSearch (10, 99,69, 105,0xDC8C00)
+				If not @Error Then
+				ConsoleWrite ("Nigga u got herpies" & @crlf)
 			   Else
 
-
-
-
-
-
-
-
-
-
-
-
-
-			  Run ()
+			   DoShit ()
+			EndIf
 
 
 
@@ -92,7 +82,7 @@ func GoldWhore()
 	  EndIf
 EndFunc
 
-Func Run ()
+Func DoShit ()
     PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
 				  If Not @error Then ;no heal needed as it sees green;
 					 ;ConsoleWrite ("this shit" & @crlf)
