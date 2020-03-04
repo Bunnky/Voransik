@@ -55,7 +55,7 @@ While 1
 		EndIf
 	WEnd
 WEnd
-;0xDC8C00;
+;0xDC8C00;  10, 99     -     69, 105
 Func ClickBoner ()
    ControlClick("Dransik Classic", "", "", "right", 1, 199, 231) ;topleft;
 	  sleep($clicklapwait)
