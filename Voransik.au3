@@ -4,9 +4,8 @@
 ;Discord : GusToughSon#7073
 ;GusToughSon@Icloud.com
 
-
 HotKeySet ("{0}", "mouse1")  	;this is for cures
-HotKeySet ("{f3}", "mouse")    ;Press Insert over pots to set where the pothack clicks;
+HotKeySet ("{9}", "mouse")    ;Press Insert over pots to set where the pothack clicks;
 HotKeySet ("{ins}", "mouse")   ;Press Insert over pots to set where the pothack clicks;
 HotKeySet ("{end}", "close")   ;press End To kill Voransik hack;
 HotKeySet ("{del}", "check")   ;press DEL to turn it on or off;
@@ -20,7 +19,7 @@ Opt("PixelCoordMode", 2) ;This sets the way the PixelSearch interacts with the c
 ConsoleWrite ("Started" & @CRLF)
 
 ;This is Global Variables;
-Global $pickx = 0, $picky = 0, $Gold = 1, $on = 0,$clicklapwait = 25
+Global $pickx = 0, $picky = 0, $pickx1 = 0, $picky1 = 0, $pickx2 = 0, $picky2 = 0, $Gold = 1, $on = 0,$clicklapwait = 25
 
 While 1
 	While $on
@@ -30,13 +29,12 @@ While 1
 			   $on = 0 ;return function to off as u cant click air;
 			   Sleep(500)
 			Else
-			   PixelSearch (10, 99,69, 105,0xDC8C00)
+			   PixelSearch (10, 99,69, 105,0xDC8C00) ; is there diease somewhere;
 				If not @Error Then
-				ConsoleWrite ("Nigga u got herpies" & @crlf)
-				ControlSend("Dransik Classic", "", "", "0")
+				  ClickCures()
 			   Else
 
-				  DoShit ()
+				  DoShit () ;main program to do pots and gold
 			   EndIf
 
 			EndIf
@@ -89,25 +87,34 @@ Func DoShit ()
    Else
 	  ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
 	  ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
-	  Sleep(200)
-	  Sleep(200)
-	  GoldWhore()
-	  Sleep(200)
-	  GoldWhore()
-	  Sleep(200)
-	  GoldWhore()
-	  Sleep(200)
-	  GoldWhore()
-	  Sleep(200)
-	  GoldWhore()
-	  Sleep(200)
-	  GoldWhore()
-	  Sleep(200)
+	  PotCoolDown()
    EndIf
 EndFunc
 
 
+func ClickCures()
+ConsoleWrite ("Nigga u got herpies" & @crlf) ;if there is;
+ControlClick("Dransik Classic", "", "", "right", 1, $pickx1, $picky1)
+PotCoolDown()
+EndFunc
 
+Func PotCoolDown()
+   Sleep(200)
+   GoldWhore()
+   Sleep(200)
+   GoldWhore()
+   Sleep(200)
+   GoldWhore()
+   Sleep(200)
+   GoldWhore()
+   Sleep(200)
+   GoldWhore()
+   Sleep(200)
+   GoldWhore()
+   Sleep(200)
+   GoldWhore()
+   Sleep(200)
+EndFunc
 
 Func check()
    If $on = 1 Then
