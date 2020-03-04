@@ -36,12 +36,8 @@ While 1
 				ControlSend("Dransik Classic", "", "", "0")
 			   Else
 
-			   DoShit ()
-			EndIf
-
-
-
-
+				  DoShit ()
+			   EndIf
 
 			EndIf
 			GoldWhore()
@@ -139,18 +135,18 @@ Func mouse()
    ConsoleWrite("Y = " & $picky & @CRLF)
 EndFunc
 Func mouse1();this is for cures
-   $pickx = MouseGetPos(0)
-   $picky = MouseGetPos(1)
-   ConsoleWrite("Pots now Set At Location:" & @CRLF)
-   ConsoleWrite("X = " & $pickx & @CRLF)
-   ConsoleWrite("Y = " & $picky & @CRLF)
+   $pickx1 = MouseGetPos(0)
+   $picky1 = MouseGetPos(1)
+   ConsoleWrite("Cures are now Set At Location:" & @CRLF)
+   ConsoleWrite("X1 = " & $pickx1 & @CRLF)
+   ConsoleWrite("Y1 = " & $picky1 & @CRLF)
 EndFunc
 Func mouse2();extra
-   $pickx = MouseGetPos(0)
-   $picky = MouseGetPos(1)
-   ConsoleWrite("Pots now Set At Location:" & @CRLF)
-   ConsoleWrite("X = " & $pickx & @CRLF)
-   ConsoleWrite("Y = " & $picky & @CRLF)
+   $pickx2 = MouseGetPos(0)
+   $picky2 = MouseGetPos(1)
+   ConsoleWrite("Unknown is Set At Location:" & @CRLF)
+   ConsoleWrite("X2 = " & $pickx2 & @CRLF)
+   ConsoleWrite("Y2 = " & $picky2 & @CRLF)
 EndFunc
 
 
