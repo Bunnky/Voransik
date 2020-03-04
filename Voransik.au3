@@ -5,20 +5,20 @@
 ;GusToughSon@Icloud.com
 
 HotKeySet ("{0}", "mouse1")  	;this is for cures
-HotKeySet ("{9}", "mouse")    ;Press Insert over pots to set where the pothack clicks;
-HotKeySet ("{ins}", "mouse")   ;Press Insert over pots to set where the pothack clicks;
-HotKeySet ("{end}", "close")   ;press End To kill Voransik hack;
-HotKeySet ("{del}", "check")   ;press DEL to turn it on or off;
-HotKeySet ("{home}", "gold")   ;no function will be removed on cleanup;
-HotKeySet ("{pause}", "kill")  ;Force close the Vorila/Dransik Client IE:Old Style dransik logout;
-HotKeySet ("{`}","ClickBoner") ;Exctra Cleanup for left behind loot;
+HotKeySet ("{9}", "mouse")  	;Press Insert over pots to set where the pothack clicks;
+HotKeySet ("{ins}", "mouse")    ;Press Insert over pots to set where the pothack clicks;
+HotKeySet ("{end}", "close")    ;press End To kill Voransik hack;
+HotKeySet ("{del}", "check")    ;press DEL to turn it on or off;
+HotKeySet ("{home}", "gold")    ;no function will be removed on cleanup;
+HotKeySet ("{pause}", "kill")   ;Force close the Vorila/Dransik Client IE:Old Style dransik logout;
+HotKeySet ("{`}","ClickBoner")  ;Exctra Cleanup for left behind loot;
 
 Opt("MouseCoordMode", 2) ;This sets the way the mouse interacts with the client (set as 2) ;
 Opt("PixelCoordMode", 2) ;This sets the way the PixelSearch interacts with the client (set as 2) ;
 
 ConsoleWrite ("Started" & @CRLF)
 
-;This is Global Variables; Disease is ;0xDC8C00;  Poison is ;     ;
+;This is Global Variables; Disease is ;0xDC8C00;
 Global $pickx = 0, $picky = 0, $pickx1 = 0, $picky1 = 0, $pickx2 = 0, $picky2 = 0, $Gold = 1, $on = 0,$clicklapwait = 25
 
 While 1
@@ -33,10 +33,8 @@ While 1
 				If not @Error Then
 				  ClickCures()
 			   Else
-
 				  DoShit () ;main program to do pots and gold
 			   EndIf
-
 			EndIf
 			GoldWhore()
 		EndIf
@@ -91,7 +89,6 @@ Func DoShit ()
    EndIf
 EndFunc
 
-
 func ClickCures()
 ConsoleWrite ("Nigga u got herpies" & @crlf) ;if there is;
 ControlClick("Dransik Classic", "", "", "right", 1, $pickx1, $picky1)
@@ -141,6 +138,7 @@ Func mouse()
    ConsoleWrite("X = " & $pickx & @CRLF)
    ConsoleWrite("Y = " & $picky & @CRLF)
 EndFunc
+
 Func mouse1();this is for cures
    $pickx1 = MouseGetPos(0)
    $picky1 = MouseGetPos(1)
@@ -148,12 +146,3 @@ Func mouse1();this is for cures
    ConsoleWrite("X1 = " & $pickx1 & @CRLF)
    ConsoleWrite("Y1 = " & $picky1 & @CRLF)
 EndFunc
-Func mouse2();extra
-   $pickx2 = MouseGetPos(0)
-   $picky2 = MouseGetPos(1)
-   ConsoleWrite("Unknown is Set At Location:" & @CRLF)
-   ConsoleWrite("X2 = " & $pickx2 & @CRLF)
-   ConsoleWrite("Y2 = " & $picky2 & @CRLF)
-EndFunc
-
-
