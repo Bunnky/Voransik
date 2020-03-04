@@ -1,6 +1,8 @@
 # Voransik
  The Shit I made to play Vorila/Dransik
 
+
+0      -=-   mouse1 sets cure location <br>
 INSERT -=-   mouse  - Sets location of pots<br>
 END    -=-   close  - kill the program <br>
 DEL    -=-   check  - turn the program on or off<br>
