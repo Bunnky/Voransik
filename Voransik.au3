@@ -27,29 +27,29 @@ While 1
 			   ConsoleWrite("set the pots dumbass" & @CRLF)
 			   $on = 0 ;return function to off as u cant click air;
 			   Sleep(500)
-			 Else
-			   PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
-				  If Not @error Then ;no heal needed as it sees green;
-					 ;ConsoleWrite ("this shit" & @crlf)
-					 GoldWhore()
-				  Else
-					 ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
-					 ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
-					 Sleep(200)
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-				EndIf
+			Else
+			   if PixelSearch (10, 99,69, 105,0xDC8C00) Then
+				  ConsoleWrite ("Nigga u got herpies" & @crlf)
+			   Else
+
+
+
+
+
+
+
+
+
+
+
+
+
+			  Run ()
+
+
+
+
+
 			EndIf
 			GoldWhore()
 		EndIf
@@ -91,6 +91,34 @@ func GoldWhore()
 	  Sleep(50)
 	  EndIf
 EndFunc
+
+Func Run ()
+    PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
+				  If Not @error Then ;no heal needed as it sees green;
+					 ;ConsoleWrite ("this shit" & @crlf)
+					 GoldWhore()
+				  Else
+					 ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
+					 ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
+					 Sleep(200)
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+					 GoldWhore()
+					 Sleep(200)
+				  EndIf
+EndFunc
+
+
+
 
 Func check()
    If $on = 1 Then
