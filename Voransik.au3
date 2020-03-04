@@ -4,6 +4,8 @@
 ;Discord : GusToughSon#7073
 ;GusToughSon@Icloud.com
 
+
+HotKeySet ("{0}", "mouse1")  	;this is for cures
 HotKeySet ("{f3}", "mouse")    ;Press Insert over pots to set where the pothack clicks;
 HotKeySet ("{ins}", "mouse")   ;Press Insert over pots to set where the pothack clicks;
 HotKeySet ("{end}", "close")   ;press End To kill Voransik hack;
@@ -31,6 +33,7 @@ While 1
 			   PixelSearch (10, 99,69, 105,0xDC8C00)
 				If not @Error Then
 				ConsoleWrite ("Nigga u got herpies" & @crlf)
+				ControlSend("Dransik Classic", "", "", "0")
 			   Else
 
 			   DoShit ()
@@ -135,3 +138,19 @@ Func mouse()
    ConsoleWrite("X = " & $pickx & @CRLF)
    ConsoleWrite("Y = " & $picky & @CRLF)
 EndFunc
+Func mouse1();this is for cures
+   $pickx = MouseGetPos(0)
+   $picky = MouseGetPos(1)
+   ConsoleWrite("Pots now Set At Location:" & @CRLF)
+   ConsoleWrite("X = " & $pickx & @CRLF)
+   ConsoleWrite("Y = " & $picky & @CRLF)
+EndFunc
+Func mouse2();extra
+   $pickx = MouseGetPos(0)
+   $picky = MouseGetPos(1)
+   ConsoleWrite("Pots now Set At Location:" & @CRLF)
+   ConsoleWrite("X = " & $pickx & @CRLF)
+   ConsoleWrite("Y = " & $picky & @CRLF)
+EndFunc
+
+
