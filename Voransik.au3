@@ -86,28 +86,28 @@ func GoldWhore()
 EndFunc
 
 Func DoShit ()
-    PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
-				  If Not @error Then ;no heal needed as it sees green;
-					 ;ConsoleWrite ("this shit" & @crlf)
-					 GoldWhore()
-				  Else
-					 ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
-					 ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
-					 Sleep(200)
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-					 GoldWhore()
-					 Sleep(200)
-				  EndIf
+   PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
+   If Not @error Then ;no heal needed as it sees green;
+	  ;ConsoleWrite ("this shit" & @crlf)
+	  GoldWhore()
+   Else
+	  ControlClick("Dransik Classic", "", "", "right", 1, $pickx, $picky) ; it saw no green and thinks you need healing
+	  ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
+	  Sleep(200)
+	  Sleep(200)
+	  GoldWhore()
+	  Sleep(200)
+	  GoldWhore()
+	  Sleep(200)
+	  GoldWhore()
+	  Sleep(200)
+	  GoldWhore()
+	  Sleep(200)
+	  GoldWhore()
+	  Sleep(200)
+	  GoldWhore()
+	  Sleep(200)
+   EndIf
 EndFunc
 
 
