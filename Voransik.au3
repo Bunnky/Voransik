@@ -9,7 +9,6 @@ HotKeySet ("{9}", "mouse")  	;Press Insert over pots to set where the pothack cl
 HotKeySet ("{ins}", "mouse")    ;Press Insert over pots to set where the pothack clicks;
 HotKeySet ("{end}", "close")    ;press End To kill Voransik hack;
 HotKeySet ("{del}", "check")    ;press DEL to turn it on or off;
-HotKeySet ("{home}", "gold")    ;no function will be removed on cleanup;
 HotKeySet ("{pause}", "kill")   ;Force close the Vorila/Dransik Client IE:Old Style dransik logout;
 HotKeySet ("{`}","ClickBoner")  ;Exctra Cleanup for left behind loot;
 
