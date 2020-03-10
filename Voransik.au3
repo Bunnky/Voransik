@@ -1,7 +1,10 @@
+#include <Misc.au3>
 ;Pothack Vorila Dransik
 ;Kyle GusToughSon Bishop
 ;Discord : GusToughSon#7073
 ;GusToughSon@Icloud.com
+
+
 
 HotKeySet ("{numpad0}", "Extra")
 HotKeySet ("{numpad1}", "DownLeft")
@@ -28,7 +31,7 @@ ConsoleWrite ("Started" & @CRLF)
 
 ;This is Global Variables; Disease is ;0xDC8C00;
 Global $pickx = 0, $picky = 0, $pickx1 = 0, $picky1 = 0, $pickx2 = 0, $picky2 = 0, $Gold = 1, $on = 0
-Global $clicklapwait = 25, $drag = 1, $DragWait = 50
+Global $clicklapwait = 25, $drag = 0, $DragWait = 5
 
 While 1
 	While $on
@@ -50,62 +53,83 @@ While 1
 	WEnd
 WEnd
 
+
+	;60 Numeric keypad 0 key
+   ; 61 Numeric keypad 1 key
+   ; 62 Numeric keypad 2 key
+   ; 63 Numeric keypad 3 key
+   ; 64 Numeric keypad 4 key
+   ; 65 Numeric keypad 5 key
+   ; 66 Numeric keypad 6 key
+    ;67 Numeric keypad 7 key
+   ; 68 Numeric keypad 8 key
+   ; 69 Numeric keypad 9 key
+
+
+
+Func PotMover()
+	If _IsPressed("10", $hDLL) Then
+
+
+
+
+
 Func DownLeft()
-	MouseClickDrag ("Left", 231, 231, 199, 199,$drag)
+	MouseClickDrag ("Left", 231, 199, 199, 231, $drag)
 	sleep ($DragWait)
 EndFunc
 
 Func Down()
-	MouseClickDrag ("Left", 215, 199,215, 231,$drag)
-	sleep ($DragWait)
-EndFunc
-
-Func DownRight()
-	MouseClickDrag ("Left",231, 199,231, 199,$drag)
-	sleep ($DragWait)
-EndFunc
-
-Func Left()
-	MouseClickDrag ("Left",231, 215,199, 215,$drag)
-	sleep ($DragWait)
-EndFunc
-
-Func Right()
-	MouseClickDrag ("Left",199, 215,231, 215,$drag)
+	MouseClickDrag ("Left", 215, 199, 215, 231, $drag)
 	sleep ($DragWait)
 EndFunc
 
 Func UpLeft()
-	MouseClickDrag ("Left",231, 199,231, 199,$drag)
+	MouseClickDrag ("Left", 231, 231, 199, 199, $drag)
+	sleep ($DragWait)
+EndFunc
+
+Func Left()
+	MouseClickDrag ("Left", 231, 215, 199, 215, $drag)
+	sleep ($DragWait)
+EndFunc
+
+Func Right()
+	MouseClickDrag ("Left", 199, 215, 231, 215, $drag)
+	sleep ($DragWait)
+EndFunc
+
+Func DownRight()
+	MouseClickDrag ("Left", 199, 199, 231, 231, $drag)
 	sleep ($DragWait)
 EndFunc
 
 Func Up()
-	MouseClickDrag ("Left", 215, 231,215, 199,$drag)
+	MouseClickDrag ("Left", 215, 231, 215, 199, $drag)
 	sleep ($DragWait)
 EndFunc
 
 Func UpRight()
-	MouseClickDrag ("Left",199, 199, 231, 231,$drag)
+	MouseClickDrag ("Left", 199, 231,231, 199,$drag)
 	sleep ($DragWait)
 EndFunc
 
 Func ClickBoner ()
-   ControlClick("Dransik Classic", "", "", "right", 1, 231, 199) ;topleft;
+   ControlClick("Dransik Classic", "", "", "right", 1, 231, 199) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
-   ControlClick("Dransik Classic", "", "", "right", 1, 215, 231) ;top;
+   ControlClick("Dransik Classic", "", "", "right", 1, 215, 231) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
-   ControlClick("Dransik Classic", "", "", "right", 1, 231, 231) ;topright;
+   ControlClick("Dransik Classic", "", "", "right", 1, 231, 231) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
-   ControlClick("Dransik Classic", "", "", "right", 1, 199, 215) ;left;
+   ControlClick("Dransik Classic", "", "", "right", 1, 199, 215) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
-   ControlClick("Dransik Classic", "", "", "right", 1, 231, 215) ;right;
+   ControlClick("Dransik Classic", "", "", "right", 1, 231, 215) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
-   ControlClick("Dransik Classic", "", "", "right", 1, 199, 199) ;downleft;
+   ControlClick("Dransik Classic", "", "", "right", 1, 199, 199) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
-   ControlClick("Dransik Classic", "", "", "right", 1, 215, 199) ;down;
+   ControlClick("Dransik Classic", "", "", "right", 1, 215, 199) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
-   ControlClick("Dransik Classic", "", "", "right", 1, 231, 199) ;down right;
+   ControlClick("Dransik Classic", "", "", "right", 1, 231, 199) ;Clicking around avatar to clean drops;
 	  sleep($clicklapwait)
 EndFunc
 
