@@ -56,7 +56,7 @@ Func DownLeft()
 EndFunc
 
 Func Down()
-	MouseClickDrag ("Left", 215, 231, 215, 199,$drag)
+	MouseClickDrag ("Left", 215, 199,215, 231,$drag)
 	sleep ($DragWait)
 EndFunc
 
@@ -66,12 +66,12 @@ Func DownRight()
 EndFunc
 
 Func Left()
-	MouseClickDrag ("Left", 199, 215,231, 215,$drag)
+	MouseClickDrag ("Left",231, 215,199, 215,$drag)
 	sleep ($DragWait)
 EndFunc
 
 Func Right()
-	MouseClickDrag ("Left",231, 215,199, 215,$drag)
+	MouseClickDrag ("Left",199, 215,231, 215,$drag)
 	sleep ($DragWait)
 EndFunc
 
@@ -81,7 +81,7 @@ Func UpLeft()
 EndFunc
 
 Func Up()
-	MouseClickDrag ("Left",215, 199, 215, 231,$drag)
+	MouseClickDrag ("Left", 215, 231,215, 199,$drag)
 	sleep ($DragWait)
 EndFunc
 
