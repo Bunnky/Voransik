@@ -6,15 +6,15 @@
 
 
 
-HotKeySet ("{numpad0}", "Extra")
-HotKeySet ("{numpad1}", "DownLeft")
-HotKeySet ("{numpad2}", "Down")
-HotKeySet ("{numpad3}", "DownRight")
-HotKeySet ("{numpad4}", "Left")
-HotKeySet ("{numpad6}", "Right")
-HotKeySet ("{numpad7}", "UpLeft")
-HotKeySet ("{numpad8}", "Up")
-HotKeySet ("{numpad9}", "UpRight")
+;~ HotKeySet ("{numpad0}", "Extra")
+;~ HotKeySet ("{numpad1}", "DownLeft")
+;~ HotKeySet ("{numpad2}", "Down")
+;~ HotKeySet ("{numpad3}", "DownRight")
+;~ HotKeySet ("{numpad4}", "Left")
+;~ HotKeySet ("{numpad6}", "Right")
+;~ HotKeySet ("{numpad7}", "UpLeft")
+;~ HotKeySet ("{numpad8}", "Up")
+;~ HotKeySet ("{numpad9}", "UpRight")
 HotKeySet ("{-}", "mouse2") ;teehee
 HotKeySet ("{0}", "mouse1")  	;this is for cures
 HotKeySet ("{9}", "mouse")  	;Press Insert over pots to set where the pothack clicks;
@@ -41,6 +41,7 @@ While 1
 			   $on = 0 ;return function to off as u cant click air;
 			   Sleep(500)
 			Else
+			   PotMover()
 			   PixelSearch (10, 99,69, 105,0xDC8C00) ; is there diease somewhere;
 				If not @Error Then
 				  ClickCures()
@@ -68,13 +69,38 @@ WEnd
 
 
 Func PotMover()
-	If _IsPressed("10", $hDLL) Then
+	If _IsPressed("60") Then
+		Extra()
+	ElseIf _IsPressed("61") Then
+		DwnLeft()
+
+	ElseIf _IsPressed("62") Then
+		Down()
+
+	ElseIf _IsPressed("63") Then
+		DownRight()
+
+	ElseIf _IsPressed("64") Then
+		Left()
+
+
+	ElseIf _IsPressed("66") Then
+		Right()
+
+	ElseIf _IsPressed("67") Then
+		UpLeft()
+
+	ElseIf _IsPressed("68") Then
+		Up()
+
+	ElseIf _IsPressed("69") Then
+		UpRight()
+	EndIf
+EndFunc
 
 
 
-
-
-Func DownLeft()
+Func DwnLeft()
 	MouseClickDrag ("Left", 231, 199, 199, 231, $drag)
 	sleep ($DragWait)
 EndFunc
