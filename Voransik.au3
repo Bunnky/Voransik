@@ -43,18 +43,7 @@ While 1
 	WEnd
 WEnd
 
-Func BodyLooter ()
 
-	$Magics = PixelSearch (1102, 609,1230, 726, 0x344CC0) ;attempt for Magics
-	  If Not @error Then         ;If it exists then
-		 ControlClick("Dransik Classic", "", "", "right", 1, $Magics[0], $Magics[1])         ;Clicks the first instance of that colour
-	  Else
-		 ConsoleWrite ("gringo is Blind" &@crlf)
-	  Sleep(10)
-	  EndIf
-
-
-EndFunc
 
 Func ClickBoner ()
    ControlClick("Dransik Classic", "", "", "right", 1, 231, 199) ;Clicking around avatar to clean drops;
@@ -107,12 +96,7 @@ func GoldWhore()
 EndFunc
 
 Func DoShit ()
-	PixelSearch (1382, 586,1386, 590,0x000000) ;If a Courpse is open then start looting that shit;
-	If not @Error Then
-		BodyLooter ()
-		ConsoleWrite ("FUCKCKCKKC" & @crlf)
-		sleep (10)
-	else
+
 	PixelSearch(430, 12, 430, 12, 0x00C800) ;health bar green check;
 		If Not @error Then ;no heal needed as it sees green;
 			;ConsoleWrite ("this shit" & @crlf)
@@ -122,7 +106,7 @@ Func DoShit ()
 			ConsoleWrite("I guess i should heal you you look pathetic" & @CRLF)
 			PotCoolDown()
 		EndIf
-	EndIf
+
 EndFunc
 
 func ClickCures()
