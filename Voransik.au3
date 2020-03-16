@@ -79,6 +79,14 @@ func GoldWhore()
 		 ;ConsoleWrite ("gringo gets nothing" &@crlf)
 	  Sleep(50)
 	  EndIf
+	$Magics = PixelSearch (188, 188, 245, 245, 0xA0C0E8) ;attempt for cave gold
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $Magics[0], $Magics[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo is Blind" &@crlf)
+	  Sleep(50)
+	  EndIf
+
 EndFunc
 
 Func DoShit ()
