@@ -21,7 +21,7 @@ ConsoleWrite ("Started" & @CRLF)
 
 ;This is Global Variables; Disease is ;0xDC8C00;
 Global $pickx = 0, $picky = 0, $pickx1 = 0, $picky1 = 0, $pickx2 = 0, $picky2 = 0, $Gold = 1, $on = 0
-Global $clicklapwait = 25
+Global $clicklapwait = 25, $Bodyxt = 1270, $Bodyyt  = 580, $Bodyxb = 1415, $Bodyyb = 725
 
 While 1
 	While $on
@@ -43,7 +43,37 @@ While 1
 	WEnd
 WEnd
 
+Func BodyLooter ()
+	  $CoOrd1 = PixelSearch($Bodyxt ,$Bodyyt, $Bodyxb,$Bodyyb, 0xE4D008)
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd1[0], $CoOrd1[1])
+	  Else
+		 ;ConsoleWrite ("no go gringo" &@crlf)
+		 Sleep(10)
+	  EndIf
+   $CaveGold = PixelSearch (188, 188, 245, 245, 0x7C611A) ;attempt for cave gold
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $CaveGold[0], $CaveGold[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo gets nothing" &@crlf)
+	  Sleep(10)
+	  EndIf
+	$Magics = PixelSearch (188, 188, 245, 245, 0x344CC0) ;attempt for Magics
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $Magics[0], $Magics[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo is Blind" &@crlf)
+	  Sleep(10)
+	  EndIf
+	$Holies = PixelSearch (188, 188, 245, 245, 0xFCF420) ;attempt for Holies
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $Holies[0], $Holies[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo was eating" &@crlf)
+	  Sleep(10)
+	  EndIf
 
+EndFunc
 
 Func ClickBoner ()
    ControlClick("Dransik Classic", "", "", "right", 1, 231, 199) ;Clicking around avatar to clean drops;
@@ -70,23 +100,29 @@ func GoldWhore()
 		 ControlClick("Dransik Classic", "", "", "right", 1, $CoOrd[0], $CoOrd[1])         ;Clicks the first instance of that colour
 	  Else
 		 ;ConsoleWrite ("no go gringo" &@crlf)
-		 Sleep(50)
+		 Sleep(10)
 	  EndIf
    $CaveGold = PixelSearch (188, 188, 245, 245, 0x7C611A) ;attempt for cave gold
 	  If Not @error Then         ;If it exists then
 		 ControlClick("Dransik Classic", "", "", "right", 1, $CaveGold[0], $CaveGold[1])         ;Clicks the first instance of that colour
 	  Else
 		 ;ConsoleWrite ("gringo gets nothing" &@crlf)
-	  Sleep(50)
+	  Sleep(10)
 	  EndIf
-	$Magics = PixelSearch (188, 188, 245, 245, 0xA0C0E8) ;attempt for cave gold
+	$Magics = PixelSearch (188, 188, 245, 245, 0x344CC0) ;attempt for Magics
 	  If Not @error Then         ;If it exists then
 		 ControlClick("Dransik Classic", "", "", "right", 1, $Magics[0], $Magics[1])         ;Clicks the first instance of that colour
 	  Else
 		 ;ConsoleWrite ("gringo is Blind" &@crlf)
-	  Sleep(50)
+	  Sleep(10)
 	  EndIf
-
+	$Holies = PixelSearch (188, 188, 245, 245, 0xFCF420) ;attempt for Holies
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $Holies[0], $Holies[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo was eating" &@crlf)
+	  Sleep(10)
+	  EndIf
 EndFunc
 
 Func DoShit ()
