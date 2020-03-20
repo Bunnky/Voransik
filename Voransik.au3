@@ -36,6 +36,8 @@ While 1
 				  ClickCures()
 			   Else
 				  DoShit () ;main program to do pots and gold
+
+
 			   EndIf
 			EndIf
 			GoldWhore()
@@ -93,6 +95,24 @@ func GoldWhore()
 		 ;ConsoleWrite ("gringo was eating" &@crlf)
 	  Sleep(10)
 	  EndIf
+
+	$OrangeCure = PixelSearch (188, 188, 245, 245, 0xF07000) ;attempt for OrangeCure
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $OrangeCure[0], $OrangeCure[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo was eating" &@crlf)
+	  Sleep(10)
+	  EndIf
+
+	  $PoisonWep = PixelSearch (188, 188, 245, 245, 0x045C00) ;attempt for PoisonWep
+	  If Not @error Then         ;If it exists then
+		 ControlClick("Dransik Classic", "", "", "right", 1, $PoisonWep[0], $PoisonWep[1])         ;Clicks the first instance of that colour
+	  Else
+		 ;ConsoleWrite ("gringo was eating" &@crlf)
+	  Sleep(10)
+	  EndIf
+
+
 EndFunc
 
 Func DoShit ()
